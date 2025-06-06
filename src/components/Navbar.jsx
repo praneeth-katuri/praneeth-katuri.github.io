@@ -37,7 +37,7 @@ const Navbar = () => {
         Contact
       </a>
       <a
-        href="https://drive.google.com/file/d/1bPMBVt_InCX4TYYS6CFFTBaXkAf_rub6/view?usp=sharing"
+        href="https://drive.google.com/file/d/1t-TQbBZAb1HdZgRxe-UUGb9k6KV2_m3c/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-2 px-4 py-2 mt-2 md:mt-0 border border-white rounded-md text-white hover:bg-white hover:text-black transition-all duration-200"
