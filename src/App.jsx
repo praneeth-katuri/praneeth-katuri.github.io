@@ -10,9 +10,15 @@ function App() {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <About />
-      <ProjectsSection />
-      <Contact />
+      <div id="about">
+        <About />
+      </div>
+      <div id="projects">
+        <ProjectsSection />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
     </div>
   );
 }
