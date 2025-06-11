@@ -11,31 +11,33 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (key) => {
+    const el = document.getElementById(key);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+    setMenuOpen(close);
+  };
+
+  const links = [
+    { label: "About", key: "about" },
+    { label: "Projects", key: "projects" },
+    { label: "Contact", key: "contact" },
+  ];
+
   const navLinks = (
     <>
-      <a
-        href="#about"
-        className="block md:inline-block px-4 py-2 text-white hover:text-yellow-300 transition duration-200"
-      >
-        About
-      </a>
-      <a
-        href="#projects"
-        className="block md:inline-block px-4 py-2 text-white hover:text-yellow-300 transition duration-200"
-      >
-        Projects
-      </a>
-      <a
-        href="#contact"
-        className="block md:inline-block px-4 py-2 text-white hover:text-yellow-300 transition duration-200"
-      >
-        Contact
-      </a>
+      {links.map(({ label, key }) => (
+        <button
+          key={key}
+          onClick={() => scrollToSection(key)}
+          className="block md:inline-block px-4 py-2 text-white hover:text-yellow-300 transition duration-200"
+        >
+          {label}
+        </button>
+      ))}
       <a
         href="https://drive.google.com/file/d/1t-TQbBZAb1HdZgRxe-UUGb9k6KV2_m3c/view?usp=sharing"
         target="_blank"
@@ -57,13 +59,10 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        {/* Logo */}
         <div className="text-2xl font-bold border-b-4 text-white">PK.</div>
 
-        {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-4">{navLinks}</div>
 
-        {/* Mobile Hamburger */}
         <div className="md:hidden text-white">
           <button onClick={toggleMenu} className="focus:outline-none">
             {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -71,7 +70,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="md:hidden px-6 py-4 bg-[#1f1f1f] border-t border-white/20 space-y-3">
           {navLinks}
