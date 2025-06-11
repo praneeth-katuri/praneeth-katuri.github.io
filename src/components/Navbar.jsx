@@ -18,7 +18,7 @@ const Navbar = () => {
   const scrollToSection = (key) => {
     const el = document.getElementById(key);
     if (el) el.scrollIntoView({ behavior: "smooth" });
-    setMenuOpen(close);
+    setMenuOpen(false);
   };
 
   const links = [
