@@ -1,7 +1,5 @@
-import React from "react";
-import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 import userData from "../data/PersonData";
-import imagedeveloper from "../assets/images/imagedeveloper.png";
+import imagedeveloper from "../assets/images/imagedeveloper.avif";
 import TypewriterText from "./TypeWriterText";
 
 const Hero = () => {
@@ -46,11 +44,7 @@ const Hero = () => {
 
         {/* Right Section */}
         <div className="w-full sm:w-1/2 mt-12 sm:mt-0 flex justify-center">
-          <img
-            src={imagedeveloper}
-            alt="Developer"
-            className="w-full"
-          />
+          <img src={imagedeveloper} alt="Developer" className="w-full" />
         </div>
       </div>
     </section>

@@ -1,12 +1,14 @@
-import React from "react";
 import userData from "../data/PersonData";
-import aboutimage from "../assets/images/AboutImage.png";
+import aboutimage from "../assets/images/AboutImage.avif";
 
 const About = () => {
   const { about } = userData;
 
   return (
-    <section id="about" className="h-screen w-full py-20 bg-transparent text-white">
+    <section
+      id="about"
+      className="h-screen w-full py-20 bg-transparent text-white"
+    >
       <div className="w-[90%] mx-auto flex flex-col-reverse sm:flex-row items-center justify-between gap-12">
         {/* Text Section */}
         <div className="w-full sm:w-1/2">
