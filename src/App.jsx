@@ -4,7 +4,6 @@ import About from "./components/About";
 import ProjectsSection from "./components/Projects";
 import Contact from "./components/Contact";
 import "./App.css";
-import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
           <Contact />
         </div>
       </div>
-      <Analytics />
     </>
   );
 }
