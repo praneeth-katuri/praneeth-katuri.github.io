@@ -1,9 +1,20 @@
 {
   "name": "pk-portfolio",
+  "workers_dev": false,
   "compatibility_date": "2025-09-08",
-  "workers_dev": true,
+  "placement": {
+    "mode": "smart"
+  },
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
     "not_found_handling": "single-page-application"
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "logs": {
+      "invocation_logs": false
+    }
   }
 }
